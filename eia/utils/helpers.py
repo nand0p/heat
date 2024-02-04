@@ -27,9 +27,8 @@ def write_json(json_file, j):
   try:
     with open(json_file, 'w') as out:
       json.dump(j, out)
-    return True
   except:
-    return False
+    print('file_exists: ', json_file)
 
 
 

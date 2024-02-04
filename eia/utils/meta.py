@@ -34,5 +34,5 @@ def print_metadata(rx):
 # status:  404 
 # url:  https://api.eia.gov/v2/None?api_key=HCVzjrUOCbriYdp3N9pypOrv8EfQQepgdYVGge3B 
 
-  print('text', rx.text)
   print('status_code', rx.status_code)
+  print('response', rx.json()['response']['data'][0])
