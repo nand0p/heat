@@ -1,0 +1,23 @@
+name: heat
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out repo
+        uses: actions/checkout@v2
+
+      - name: dump env
+        run: env
+
+      - name: install tox
+        run: pip install tox
+
+      - name: run tox
+        run: tox
+        working-directory: eia
