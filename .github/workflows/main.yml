@@ -16,7 +16,7 @@ jobs:
         run: env
 
       - name: install pylint
-        run: pip install pylint python-dateutil
+        run: pip install pylint python-dateutil numpy matplotlib
 
       - name: run pylint total_energy_get_data
         run: pylint total_energy_get_data.py
