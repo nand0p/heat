@@ -58,6 +58,7 @@ for month in months:
 
     if api_pause:
       time.sleep(api_pause)
+
   else:
     print('FILE EXISTS NOT HITTING API ', url)
     f = open(json_file)
@@ -65,7 +66,7 @@ for month in months:
     pollution[month] = j['response']['data'][0]['value']
     f.close()
 
-print()
-print('POLLUTION', pollution)
-print()
-helpers.write_json(data_dir + '/pollution.json', pollution)
+  print()
+  print('POLLUTION', pollution)
+  print()
+  helpers.write_json(data_dir + '/pollution.json', pollution)
