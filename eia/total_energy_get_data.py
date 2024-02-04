@@ -1,11 +1,14 @@
-from dateutil.rrule import rrule, MONTHLY
-from utils import helpers, meta
-import requests
-import datetime
+''' get data from eia total-energy api endpoint '''
+# pylint: disable=C0103,W0311
+
+import os
 import json
 import time
-import os
+import datetime
+import requests
 
+from dateutil.rrule import rrule, MONTHLY
+from utils import helpers, meta
 
 pollution = {}
 api = 'https://api.eia.gov/v2/total-energy/'
@@ -17,7 +20,7 @@ freq = 'monthly'
 facet = 'TETCEUS'
 start = datetime.date(1975, 1, 1)
 end = datetime.date(2023, 10, 1)
-months = [m for m in rrule(MONTHLY, dtstart=start, until=end)]
+months = list(rrule(MONTHLY, dtstart=start, until=end))
 api_key = helpers.get_api_key(api_key_path)
 helpers.ensure_data_dir(data_dir)
 
@@ -40,9 +43,9 @@ for month in months:
 
   if not os.path.exists(json_file):
     try:
-      r = requests.get(url)
-    except:
-      print('cannot get: ', month)
+      r = requests.get(url, timeout=300)
+    except IOError as exc:
+      raise IOError('cannot get: ', month) from exc
 
     if r:
       meta.print_metadata(r)
@@ -61,10 +64,9 @@ for month in months:
 
   else:
     print('FILE EXISTS NOT HITTING API ', url)
-    f = open(json_file)
-    j = json.load(f)
+    with open(json_file, encoding='utf8') as f:
+      j = json.load(f)
     pollution[month] = j['response']['data'][0]['value']
-    f.close()
 
   print()
   print('POLLUTION', pollution)

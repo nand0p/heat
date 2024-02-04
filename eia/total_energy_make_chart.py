@@ -1,7 +1,9 @@
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
+''' eia data make line chart of total energy co2 emissions '''
+# pylint: disable=C0103,W0311
+
 import json
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 
@@ -9,11 +11,8 @@ data_dir = './'
 json_file = data_dir + 'pollution.json'
 png_out = data_dir + 'pollution.png'
 
-
-f = open(json_file)
-j = json.load(f)
-f.close()
-
+with open(json_file, encoding='utf8') as f:
+  j = json.load(f)
 
 print()
 print('POLLUTION', j)
@@ -30,9 +29,9 @@ np_co2 = np.array(co2)
 time = np.array(months)
 
 plt.plot(time, np_co2)
-plt.xlabel("1975 - Months - 2023")  # add X-axis label
-plt.ylabel("Million Metric Tons")  # add Y-axis label
-plt.title("CO2 Emissions United States") 
+plt.xlabel("1975 - Months - 2023")
+plt.ylabel("Million Metric Tons")
+plt.title("CO2 Emissions United States")
 plt.savefig(png_out)
 plt.show()
 plt.close()

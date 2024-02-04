@@ -15,9 +15,17 @@ jobs:
       - name: dump env
         run: env
 
-      - name: install tox
-        run: pip install tox
+      - name: install pylint
+        run: pip install pylint
 
-      - name: run tox
-        run: tox
+      - name: run pylint total_energy_get_data
+        run: pylint total_energy_get_data.py
+        working-directory: eia
+
+      - name: run pylint total_energy_make_chart
+        run: pylint total_energy_make_chart.py
+        working-directory: eia
+
+      - name: run pylint eia_get_routes
+        run: pylint eia_get_routes.py
         working-directory: eia
