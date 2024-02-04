@@ -7,7 +7,7 @@ import time
 import datetime
 import requests
 
-from dateutil.rrule import rrule, MONTHLY
+from dateutil import rrule
 from utils import helpers, meta
 
 pollution = {}
@@ -20,7 +20,7 @@ freq = 'monthly'
 facet = 'TETCEUS'
 start = datetime.date(1975, 1, 1)
 end = datetime.date(2023, 10, 1)
-months = list(rrule(MONTHLY, dtstart=start, until=end))
+months = list(rrule.rrule(rrule.MONTHLY, dtstart=start, until=end))
 api_key = helpers.get_api_key(api_key_path)
 helpers.ensure_data_dir(data_dir)
 
