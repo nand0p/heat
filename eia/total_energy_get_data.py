@@ -69,4 +69,4 @@ for month in months:
   print()
   print('POLLUTION', pollution)
   print()
-  helpers.write_json(data_dir + '/pollution.json', pollution)
+  helpers.write_json('./pollution.json', pollution)
