@@ -1,5 +1,8 @@
 ![alt text](https://github.com/nand0p/heat/blob/master/eia/pollution.png?raw=true)
 
+# endpoint
+- https://api.eia.gov/v2/
+
 # routes
 - "coal"
 - "crude-oil-imports"
