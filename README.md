@@ -16,3 +16,10 @@ https://github.com/datasets/co2-ppm/blob/master/scripts/process.sh
 
 # Keeling Curve
 ![alt text](https://github.com/nand0p/heat/blob/master/keelingcurve.jpg?raw=true)
+
+<p>
+  <img src=https://github.com/nand0p/heat/blob/master/sensitivity/hot_models.png?raw=true
+</p>
+<p>
+  <img src=https://github.com/nand0p/heat/blob/master/sensitivity/all_models.png?raw=true
+</p>
