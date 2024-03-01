@@ -5,6 +5,7 @@ import json
 import sys
 
 
+all_models = False
 debug = False
 d_raw = []
 api = 'https://raw.githubusercontent.com/mzelinka/cmip56_forcing_feedback_ecs/master/cmip56_forcing_feedback_ecs.json'
@@ -20,13 +21,6 @@ d_raw.append({'threshold': threshold})
 d_raw.append({'debug': debug})
 d_raw.append({'all_file': all_file})
 d_raw.append({'hot_file': hot_file})
-
-if len(sys.argv) > 1:
-  all_models = True
-  print('...run ALL models...')
-else:
-  all_models = False
-  print('...run HOT models...')
 
 r = requests.get(api)
 j = json.loads(r.text)
@@ -51,8 +45,8 @@ for model in results:
           x_name.append(name)
         elif model_data > threshold - 1:
           plt.bar(name[0:2], model_data)
-        elif all_models == True:
-          plt.bar(name[0:2], model_data)
+        #elif all_models == True:
+        #  plt.bar(name[0:2], model_data)
 
 plt.legend(set(x_name))
 plt.ylabel('ECS DATA')
