@@ -60,7 +60,7 @@ for model in results:
         elif value > threshold - 1:
           plt.bar(name[0:2], value)
 
-plt.legend(x_name)
+plt.legend(set(x_name))
 plt.xlabel('HOT MODELS')
 plt.ylabel('ECS DATA')
 plt.title('EQUILIBRIUM CLIMATE SENSITIVITY')
