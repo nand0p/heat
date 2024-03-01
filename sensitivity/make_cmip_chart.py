@@ -6,6 +6,8 @@ import json
 debug = False
 results = []
 threshold = 4.75
+all_models = True
+#all_models = False
 
 r = requests.get('https://raw.githubusercontent.com/mzelinka/cmip56_forcing_feedback_ecs/master/cmip56_forcing_feedback_ecs.json')
 
@@ -59,9 +61,15 @@ for model in results:
           x_name.append(name)
         elif value > threshold - 1:
           plt.bar(name[0:2], value)
+        elif all_models == True:
+          plt.bar(name[0:2], value)
 
 plt.legend(set(x_name))
-plt.xlabel('HOT MODELS')
 plt.ylabel('ECS DATA')
 plt.title('EQUILIBRIUM CLIMATE SENSITIVITY')
-plt.savefig('hot_models.png')
+if all_models:
+  plt.xlabel('ALL MODELS')
+  plt.savefig('all_models.png')
+else:
+  plt.xlabel('HOT MODELS')
+  plt.savefig('hot_models.png')
