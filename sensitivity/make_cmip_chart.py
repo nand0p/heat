@@ -2,20 +2,38 @@ import matplotlib.pylab as plt
 import requests
 import pprint
 import json
+import sys
+
 
 debug = False
+api = 'https://raw.githubusercontent.com/mzelinka/cmip56_forcing_feedback_ecs/master/cmip56_forcing_feedback_ecs.json'
 results = []
 threshold = 4.75
-all_models = True
-#all_models = False
+all_file = 'all_models.png'
+hot_file = 'hot_models.png'
 
-r = requests.get('https://raw.githubusercontent.com/mzelinka/cmip56_forcing_feedback_ecs/master/cmip56_forcing_feedback_ecs.json')
+if debug:
+  print('args: ', sys.argv)
+  print('api: ', api)
+  print('threshold: ', threshold)
+  print('debug: ', debug)
+  print('all_file: ', all_file)
+  print('hot_file: ', hot_file)
 
+if len(sys.argv) > 1:
+  all_models = True
+  print('...run all models...')
+else:
+  all_models = False
+  print('...run hot models...')
+
+r = requests.get(api)
 j = json.loads(r.text)
 
 if debug:
   print('status', r.status_code)
   print('text', r.text)
+  print('content', r.content)
 
 for key1, val1 in j.items():
   if debug:
@@ -69,7 +87,9 @@ plt.ylabel('ECS DATA')
 plt.title('EQUILIBRIUM CLIMATE SENSITIVITY')
 if all_models:
   plt.xlabel('ALL MODELS')
-  plt.savefig('all_models.png')
+  print('save', all_file)
+  plt.savefig(all_file)
 else:
   plt.xlabel('HOT MODELS')
-  plt.savefig('hot_models.png')
+  print('save', hot_file)
+  plt.savefig(hot_file)
