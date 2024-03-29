@@ -1,0 +1,69 @@
+Climate Change APIs
+
+
+https://api.earthdata.nasa.gov/
+
+https://www.ncdc.noaa.gov/cdo-web/webservices/v2
+
+https://climate.data.worldbank.org/api/v1/
+
+https://cds.climate.esa.int/api/v1/
+
+https://environmentalinsights.google.com/
+
+https://api.globalwarming.org/v1/
+
+
+    NASA's Climate Data API: Provides access to a wide range of climate and Earth science data, including temperature, precipitation, and sea level data. No API key required. (https://data.nasa.gov/api/)
+
+    NOAA Climate Data Online (CDO): Offers access to climate data from the National Oceanic and Atmospheric Administration, including temperature, precipitation, and sea level data. API key required. (https://www.ncdc.noaa.gov/cdo-web/)
+
+    Climate Data Store (CDS): Provides access to climate data from the European Centre for Medium-Range Weather Forecasts (ECMWF), including temperature, precipitation, and wind data. API key required. (https://cds.climate.copernicus.eu/)
+
+    Climate Hazards Group InfraRed Precipitation with Station Data (CHIRPS): Offers access to satellite-derived precipitation data, including monthly and daily data. API key required. (https://climate.gesdisc.eas.gatech.edu/data/CHIRPS/)
+
+    Climate Reanalyzer: Provides access to global climate data, including temperature, precipitation, and wind data, from the National Center for Atmospheric Research (NCAR). No API key required. (https://climatereanalyzer.org/)
+
+    Climate Forcing Reconstruction for use in Earth System Studies (CERES): Offers access to satellite-derived data on Earth's energy balance, including top-of-atmosphere radiation data. API key required. (https://ceres.jpl.nasa.gov/data/)
+
+    European Space Agency (ESA) Climate Change Initiative (CCI): Provides access to climate data, including land cover, sea ice, and vegetation data. API key required. (https://climate.esa.int/)
+
+    Climate Data Record (CDR) System: Provides access to long-term climate data records from NOAA, including temperature, precipitation, and sea level data. API key required. (https://www.ncdc.noaa.gov/cdr/)
+
+    Climate Information for Risk Assessment (CIRA): Offers access to climate data, including temperature, precipitation, and wind data, from the European Centre for Medium-Range Weather Forecasts (ECMWF). API key required. (https://climate.copernicus.eu/)
+
+    Climate Data Portal: Provides access to climate data, including temperature, precipitation, and sea level data, from the European Space Agency (ESA). No API key required. (https://climate.esa.int/climate-data/)
+
+    Climate Data Record from the National Snow and Ice Data Center (NSIDC): Offers access to climate data related to snow and ice, including sea ice extent and concentration data. No API key required. (https://nsidc.org/data/)
+
+    Climate Data Record from the National Oceanographic Data Center (NODC): Provides access to climate data, including temperature, salinity, and ocean current data. No API key required. (https://www.nodc.noaa.gov/)
+
+    Climate Data Record from the British Atmospheric Data Centre (BADC): Offers access to climate data, including temperature, precipitation, and wind data. API key required. (https://catalogue.ceda.ac.uk/)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF): Provides access to climate data, including temperature, precipitation, and wind data. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the Japan Meteorological Agency (JMA): Offers access to climate data, including temperature, precipitation, and wind data. No API key required. (https://www.jma.go.jp/jma/eng/data/dat_index.html)
+
+    Climate Data Record from the National Institute for Water and Atmospheric Research (NIWA): Provides access to climate data, including temperature, precipitation, and sea level data. No API key required. (https://data.niwa.co.nz/)
+
+    Climate Data Record from the Australian Bureau of Meteorology (BOM): Offers access to climate data, including temperature, precipitation, and wind data. No API key required. (https://www.bom.gov.au/climate/data/)
+
+    Climate Data Record from the National Oceanic and Atmospheric Administration (NOAA) National Centers for Environmental Information (NCEI): Provides access to climate data, including temperature, precipitation, and sea level data. No API key required. (https://www.ncei.noaa.gov/data/)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) European Climate Assessment & Data (ECAD): Offers access to climate data, including temperature, precipitation, and wind data. API key required. (https://www.ecmwf.int/en/research/climate-reanalysis/)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) Integrated Forecast System (IFS): Provides access to climate data, including temperature, precipitation, and wind data. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5: Offers access to climate data, including temperature, precipitation, and wind data. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA-Interim: Provides access to climate data, including temperature, precipitation, and wind data. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA-20CM: Offers access to climate data, including temperature and precipitation data. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5-Land: Provides access to climate data, including temperature and precipitation data for land areas. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5-H: Offers access to climate data, including temperature, precipitation, and wind data at high resolution. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5-Land Hourly: Provides access to climate data, including temperature and precipitation data for land areas at high resolution. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
+
+    Climate Data Record from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5-Land Daily: Offers access to climate data, including temperature and precipitation data for land areas at daily resolution. API key required. (https://www.ecmwf.int/en/forecasts/datasets/archive-datasets)
